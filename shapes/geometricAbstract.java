@@ -4,7 +4,7 @@
  * @version 1.0 
 */
 
-public class geometricAbstract {
+public class GeometricAbstract {
  // Default variables
     public static final String DEFAULT_COLOR = "Black";
     public static final boolean DEFAULT_FILLED = true;
@@ -81,7 +81,7 @@ public class geometricAbstract {
 
         //returns the sharable things between 
         else {
-            geometricAbstract New = (geometricAbstract) other;
+            GeometricAbstract New = (GeometricAbstract) other;
             return (this.x  == New.x && 
                     this.y == New.y && 
                     this.filled == New.filled && 
