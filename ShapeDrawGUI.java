@@ -9,7 +9,14 @@ public class ShapeDrawGUI extends JFrame {
     
    // Class Variables  
    private Canvas canvas;
-      
+   private JButton triangleButton;
+   private JButton circleButton;
+   private JButton squareButton;
+   private JButton rectangleButton;
+   private JButton ovalButton;
+   private JButton octagonButton;
+   
+   
    public ShapeDrawGUI() {
       
       // Use a GridBagLayout
@@ -39,66 +46,65 @@ public class ShapeDrawGUI extends JFrame {
       positionConst.weighty = 0;
       
       // Add buttons and checkboxes below the canvas here
-      JButton button1 = new JButton("Square");
-      JButton button2 = new JButton("Triangle");
-      JButton button3 = new JButton("Octagon");
-      JButton button4 = new JButton("Circle");
-      JButton button5 = new JButton("Red");
-      JButton button6 = new JButton("Blue");
-      JButton button7 = new JButton("Green");
-      JButton button8 = new JButton("Orange");
-      JButton button9 = new JButton("Pink");
-      JButton button10 = new JButton("Yellow");   
-
-      JPanel panel1 = new JPanel();
-      panel1.add(button1);
-      this.getContentPane().add(panel1);
-      setVisible(true);
+     
+      // Create "Triangle" Button
+      triangleButton = new JButton("Triangle");
       
-      JPanel panel2 = new JPanel();
-      panel2.add(button2);
-      this.getContentPane().add(panel2);
-      setVisible(true);
       
-      JPanel panel3 = new JPanel();
-      panel2.add(button3);
-      this.getContentPane().add(panel3);
-      setVisible(true);
+      positionConst.gridx = 0;
+      positionConst.gridy = 1;
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      add(triangleButton, positionConst);
       
-      JPanel panel4 = new JPanel();
-      panel2.add(button4);
-      this.getContentPane().add(panel4);
-      setVisible(true);
       
-      JPanel panel5 = new JPanel();
-      panel2.add(button5);
-      this.getContentPane().add(panel5);
-      setVisible(true);
+      //Create "Circle" Button
+      circleButton = new JButton("Circle");
+     
       
-      JPanel panel6 = new JPanel();
-      panel2.add(button6);
-      this.getContentPane().add(panel6);
-      setVisible(true);
+      positionConst.gridx = 0;
+      positionConst.gridy = 2;
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      add(circleButton, positionConst);
       
-      JPanel panel7 = new JPanel();
-      panel2.add(button7);
-      this.getContentPane().add(panel7);
-      setVisible(true);
       
-      JPanel panel8 = new JPanel();
-      panel2.add(button8);
-      this.getContentPane().add(panel8);
-      setVisible(true);
+      // Create "Square" Button
+      squareButton = new JButton("Square");
       
-      JPanel panel9 = new JPanel();
-      panel2.add(button9);
-      this.getContentPane().add(panel9);
-      setVisible(true);
       
-      JPanel panel10 = new JPanel();
-      panel2.add(button10);
-      this.getContentPane().add(panel10);
-      setVisible(true);
+      positionConst.gridx = 0;
+      positionConst.gridy = 2;
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      add(squareButton, positionConst);
+      
+      
+      // Create "Rectangle" Button
+      rectangleButton = new JButton("Rectangle");
+      
+      
+      positionConst.gridx = 0;
+      positionConst.gridy = 2;
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      add(rectangleButton, positionConst);
+      
+      
+      //Create "Oval" Button
+      ovalButton = new JButton("Oval");
+      
+      
+      positionConst.gridx = 0;
+      positionConst.gridy = 2;
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      add(ovalButton, positionConst);
+      
+      
+      //Create "Octagon" Button
+      octagonButton = new JButton("Octagon");
+      
+      
+      positionConst.gridx = 0;
+      positionConst.gridy = 2;
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      add(octagonButton, positionConst);
    }
    
    public static void main(String[] args) {
