@@ -15,6 +15,13 @@ public class ShapeDrawGUI extends JFrame {
    private JButton rectangleButton;
    private JButton ovalButton;
    private JButton octagonButton;
+   private JCheckBox filledButton;
+   private JButton redButton;
+   private JButton blueButton;
+   private JButton greenButton;
+   private JButton pinkButton;
+   private JButton yellowButton;
+   private JButton purpleButton;
    
    
    public ShapeDrawGUI() {
@@ -47,64 +54,124 @@ public class ShapeDrawGUI extends JFrame {
       
       // Add buttons and checkboxes below the canvas here
      
+      
       // Create "Triangle" Button
+      
       triangleButton = new JButton("Triangle");
       
-      
+      positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 0;
       positionConst.gridy = 1;
-      positionConst.insets = new Insets(10, 10, 10, 10);
       add(triangleButton, positionConst);
       
       
       //Create "Circle" Button
       circleButton = new JButton("Circle");
-     
       
-      positionConst.gridx = 0;
-      positionConst.gridy = 2;
       positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 1;
+      positionConst.gridy = 1;
       add(circleButton, positionConst);
       
       
       // Create "Square" Button
       squareButton = new JButton("Square");
       
-      
-      positionConst.gridx = 0;
-      positionConst.gridy = 2;
       positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 2;
+      positionConst.gridy = 1;
       add(squareButton, positionConst);
       
       
       // Create "Rectangle" Button
       rectangleButton = new JButton("Rectangle");
       
-      
-      positionConst.gridx = 0;
-      positionConst.gridy = 2;
       positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 3;
+      positionConst.gridy = 1;
       add(rectangleButton, positionConst);
       
       
       //Create "Oval" Button
       ovalButton = new JButton("Oval");
       
-      
-      positionConst.gridx = 0;
-      positionConst.gridy = 2;
       positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 4;
+      positionConst.gridy = 1;
       add(ovalButton, positionConst);
       
       
       //Create "Octagon" Button
       octagonButton = new JButton("Octagon");
       
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 5;
+      positionConst.gridy = 1;
+      add(octagonButton, positionConst);
       
+      
+      //Create "filled" check Box Button
+      filledButton = new JCheckBox("filled");
+      
+      positionConst.gridx = 6;
+      positionConst.gridy = 1;
+      add(filledButton, positionConst);
+      
+      
+      //Create "Red" Button
+      redButton = new JButton("Red");
+      
+      positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 0;
       positionConst.gridy = 2;
+      add(redButton, positionConst);
+      
+      
+      //Create "Blue" Button
+      blueButton = new JButton("Blue");
+      
       positionConst.insets = new Insets(10, 10, 10, 10);
-      add(octagonButton, positionConst);
+      positionConst.gridx = 1;
+      positionConst.gridy = 2;
+      add(blueButton, positionConst);
+      
+      
+      //Create "Green" Button
+      greenButton = new JButton("Red");
+      
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 2;
+      positionConst.gridy = 2;
+      add(greenButton, positionConst);
+      
+      
+      //Create "Pink" Button
+      pinkButton = new JButton("Pink");
+      
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 3;
+      positionConst.gridy = 2;
+      add(pinkButton, positionConst);
+      
+      
+      //Create "Yellow" Button
+      yellowButton = new JButton("Yellow");
+      
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 4;
+      positionConst.gridy = 2;
+      add(yellowButton, positionConst);
+      
+      
+      //Create "Purple" Button
+      purpleButton = new JButton("Purple");
+      
+      positionConst.insets = new Insets(10, 10, 10, 10);
+      positionConst.gridx = 5;
+      positionConst.gridy = 2;
+      add(purpleButton, positionConst);
+      
+      
    }
    
    public static void main(String[] args) {
