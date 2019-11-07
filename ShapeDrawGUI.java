@@ -65,8 +65,8 @@ public class ShapeDrawGUI extends JFrame {
       triangleButton = new JButton("Triangle");
       //triangleButton.addActionListener(this);
       
-      positionConst.gridx = 1;
-      positionConst.gridy = 2;
+      positionConst.gridx = 0;
+      positionConst.gridy = 1;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(triangleButton, positionConst);
       
@@ -76,7 +76,7 @@ public class ShapeDrawGUI extends JFrame {
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 1;
-      positionConst.gridy = 2;
+      positionConst.gridy = 1;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(circleButton, positionConst);
       
@@ -87,9 +87,6 @@ public class ShapeDrawGUI extends JFrame {
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
       positionConst.gridy = 1;
-      
-      positionConst.gridx = 3;
-      positionConst.gridy = 2;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(squareButton, positionConst);
       
@@ -100,10 +97,6 @@ public class ShapeDrawGUI extends JFrame {
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 3;
       positionConst.gridy = 1;
-
-      
-      positionConst.gridx = 1;
-      positionConst.gridy = 3;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(rectangleButton, positionConst);
       
@@ -113,10 +106,7 @@ public class ShapeDrawGUI extends JFrame {
    
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
-
-      
-      positionConst.gridx = 2;
-      positionConst.gridy = 3;
+      positionConst.gridy = 1;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(ovalButton, positionConst);
       
@@ -188,16 +178,7 @@ public class ShapeDrawGUI extends JFrame {
       add(purpleButton, positionConst);
       
       
-      //create filled checkbox
-    JCheckBox checkbox = new JCheckBox("filled", false);
- 
-    positionConst.gridx = 4;
-    positionConst.gridy = 2;
-    positionConst.insets = new Insets(5, 5, 5, 5);
-    add(checkbox, positionConst);
-      
    }
-
 
    //this is what main will look like
    public static void main(String[] args) {
