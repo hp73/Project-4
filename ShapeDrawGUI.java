@@ -37,10 +37,7 @@ public class ShapeDrawGUI extends JFrame {
       setSize(1100,800);        
       setTitle("Draw Shapes");        
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
       
-      //making and adding buttons, check boxes an dsuch
-      //DON"T CHANGE THIS
       // Add the canvas
       positionConst.gridx = 0;
       positionConst.gridy = 0;
@@ -59,8 +56,10 @@ public class ShapeDrawGUI extends JFrame {
       positionConst.gridy = 1;
       positionConst.weighty = 0;
       
-      // Add buttons and checkboxes below the canvas here
+      
+      // Adding buttons and checkboxes 
 
+      
       // Create "Triangle" Button
       triangleButton = new JButton("Triangle");
       //triangleButton.addActionListener(this);
