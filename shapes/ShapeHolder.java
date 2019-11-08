@@ -44,18 +44,19 @@ public class ShapeHolder implements Iterable<GeometricAbstract> {
         return new PointIterator(this);
      }
     
-    public static ShapeHolder getInstance() {
+    /*public static ShapeHolder getInstance() {
        if (instance == null) {
           instance = new ShapeHolder();
        }
        
        return instance;
-    }
+    }*/
 }
  
 //the iterator
 class GeometricIterator implements Iterable<GeometricAbstract> {
     private int index = 0;
+    ShapeHolder data;
     
     /*public ShapeContainer() {
        shapes = new shapes[] {new GeometricShape(),
@@ -67,19 +68,13 @@ class GeometricIterator implements Iterable<GeometricAbstract> {
         index = 0;
        return new GeometricIterator(this);
     }
-    
- }
- 
- class GeometricIterator implements Iterator<Square> {
-    SquareContainer data;
-    int current;
-    
-    public SquareIterator(SquareContainer data) {
-       this.data = data;
-       current = 0;
-    }
-    
-    /*public Square next() {
+
+    public GeometricIterator(ShapeHolder data) {
+        this.data = data;
+        current = 0;
+     }
+
+         /*public Square next() {
        return data.squares[current++];
        
     }*/
@@ -89,7 +84,7 @@ class GeometricIterator implements Iterable<GeometricAbstract> {
         System.out.println(shapes[index]);
 
     }
-    
+
     /*public boolean hasNext() {
        return current < data.squares.length;
     }*/
@@ -110,7 +105,9 @@ class GeometricIterator implements Iterable<GeometricAbstract> {
       
 
     }
+    
  }
+ 
 
  
  
