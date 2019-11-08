@@ -178,7 +178,7 @@ public class ShapeDrawGUI extends JFrame {
       
       
    }
-      
+
    //this is what main will look like
    public static void main(String[] args) {
        
