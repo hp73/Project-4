@@ -12,7 +12,7 @@
  * 
  */
 
-public class roundAbstract extends geometricAbstract{
+public class roundAbstract extends GeometricAbstract{
 
     // Create a private string and integer array for the name and scores 
     public int radius;

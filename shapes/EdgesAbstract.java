@@ -4,7 +4,7 @@
  * @version 1.0 Project 3
 */
 
-public class EdgesAbstract extends geometricAbstract {
+public class EdgesAbstract extends GeometricAbstract {
     
    // Class variables
    public static final int DEFAULT_WIDTH = 10;
