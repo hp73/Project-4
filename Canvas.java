@@ -1,3 +1,10 @@
+/*
+ * This is a Canvas class that tracks shapes and prints them on a canvas
+ * @author Harry Pinkerton
+ * @version 1.0 Project 4
+ * 
+ */
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -12,7 +19,7 @@ import shapes.*;
 public class Canvas extends JPanel implements MouseListener, MouseMotionListener {
    
    //Variables
-   //updates the mouse things and "what we want itto be"
+   //updates the mouse things and "what we want it to be"
    private Point posStart;
    private Point posEnd;   
    private Rectangle drawRect;
@@ -25,7 +32,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    
    // Final variables
    //the outline of the rectangle
-   //abstract draw metjod
+   //abstract draw method
    final private Color colorSelect = new Color(0, 200, 200);
    
    // Constructors and setup methods
@@ -36,8 +43,6 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       
       // No selection rectangle to draw
       drawRect = null;
-
-      ////
       //drawPoly = null;
       
       // Listen for mouse movement or input
@@ -45,7 +50,6 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       addMouseListener(this);    
       //mouse movements
       addMouseMotionListener(this);
-      
       
    }
    
@@ -61,7 +65,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
          g.setColor(colorSelect);
 
       //a method and instance varible called drawRect, watch out!!!
-      //if method is there you ahve clicked
+      //if method is there you ae clicked
       // the method draws the rectangle
          g.drawRect((int)drawRect.getX(), (int)drawRect.getY(), 
          (int)drawRect.getWidth(), (int)drawRect.getHeight());

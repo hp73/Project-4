@@ -1,3 +1,10 @@
+/*
+ * This is a ShapeDrawGUI class that adds a frame,buttons, and button functionality
+ * to the GUI where shapes will be printed.
+ * @author Harry Pinkerton
+ * @version 1.0 Project 4
+ * 
+ */
 
 //JFrame is in here
 import javax.swing.*;
@@ -261,7 +268,6 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
    }
    
    
-      
    //this is what main will look like
    public static void main(String[] args) {
        
