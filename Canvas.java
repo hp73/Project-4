@@ -9,7 +9,7 @@ import java.awt.event.*;
 import shapes.*;
 
 //from the mouse stuff
-public class Canvas extends JPanel implements MouseListener, MouseMotionListener {
+public class Canvas extends JPanel implements MouseListener, MouseMotionListener{
    
    //Variables
    //updates the mouse things and "what we want it to be"
@@ -17,12 +17,8 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    private Point posEnd;   
    private Rectangle drawRect;
    private String shape;
-   
-   
-   
-   
    //private Octagon drawPoly;
-   //private Circle drawRound;
+   //private Circle drawRound; 
 
 
    
@@ -59,6 +55,13 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       super.paintComponent(g);
       
       // Draw any shapes in the shape holder here
+      g.drawOval(getX(), getY(), getWidth(), getHeight());
+      g.drawRect(getX(), getY(), getWidth(), getHeight());
+      
+      //g.drawOctagon(0, 0, getWidth(), getHeight());
+      ///g.drawCircle(0, 0, getWidth(), getHeight());
+   
+      
       // Draw drag rectangle if it is there
 
       if (drawRect != null) {
@@ -74,6 +77,37 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
 
          //g.drawPoly((int)drawPoly.getX(), (int)drawPoly.getY(), (int)drawPoly.getWidth(), (int)drawPoly.getHeight());
          
+      }
+      
+   }
+   
+   @Override
+   public void actionPerformed(ActionEvent event){
+      
+      JButton sourceEvent = (JButton) event.getSource();
+      
+      if (sourceEvent == orangeButton){
+         this.setBackground(Color.ORANGE);
+      }
+      
+      else if (sourceEvent == yellowButton){
+         this.setBackground(Color.YELLOW);
+      }
+      
+      else if (sourceEvent == pinkButton){
+         this.setBackground(Color.PINK);
+      }
+      
+      else if (sourceEvent == redButton){
+         this.setBackground(Color.RED);
+      }
+      
+      else if (sourceEvent == blueButton){
+         this.setBackground(Color.BLUE);
+      }
+      
+      else if (sourceEvent == greenButton){
+         this.setBackground(Color.GREEN);
       }
       
    }
@@ -215,6 +249,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       
       
    }
+   
    
 
    public void setShape(String shape){

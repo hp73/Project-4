@@ -2,12 +2,14 @@
 //JFrame is in here
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 //import com.apple.eawt.ApplicationEvent;
 //import com.apple.eawt.ApplicationListener;
 
 
-public class ShapeDrawGUI extends JFrame {
+public class ShapeDrawGUI extends JFrame{
     
    // Class Variables  
    private Canvas canvas;
@@ -23,7 +25,7 @@ public class ShapeDrawGUI extends JFrame {
    private JButton greenButton;
    private JButton pinkButton;
    private JButton yellowButton;
-   private JButton purpleButton;
+   private JButton orangeButton;
    
    
    public ShapeDrawGUI() {
@@ -100,12 +102,14 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Oval" Button
       ovalButton = new JButton("Oval");
-   
+      ovalButton.addActionListener(this);
+      
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
       positionConst.gridy = 1;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(ovalButton, positionConst);
+      
       
       
       //Create "Octagon" Button
@@ -143,7 +147,7 @@ public class ShapeDrawGUI extends JFrame {
       
       
       //Create "Green" Button
-      greenButton = new JButton("Red");
+      greenButton = new JButton("Green");
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -166,17 +170,17 @@ public class ShapeDrawGUI extends JFrame {
       positionConst.gridy = 2;
       add(yellowButton, positionConst);
       
-      //Create "Purple" Button
-      purpleButton = new JButton("Purple");
+      //Create "Orange" Button
+      orangeButton = new JButton("Orange");
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
       positionConst.gridy = 2;
-      add(purpleButton, positionConst);
+      add(orangeButton, positionConst);
       
       
    }
-      
+   
    //this is what main will look like
    public static void main(String[] args) {
        
