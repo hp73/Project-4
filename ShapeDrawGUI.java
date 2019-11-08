@@ -23,7 +23,7 @@ public class ShapeDrawGUI extends JFrame {
    private JButton greenButton;
    private JButton pinkButton;
    private JButton yellowButton;
-   private JButton purpleButton;
+   private JButton orangeButton;
    
    
    public ShapeDrawGUI() {
@@ -59,10 +59,8 @@ public class ShapeDrawGUI extends JFrame {
       
       // Adding buttons and checkboxes 
 
-      
       // Create "Triangle" Button
       triangleButton = new JButton("Triangle");
-      //triangleButton.addActionListener(this);
       
       positionConst.gridx = 0;
       positionConst.gridy = 1;
@@ -112,6 +110,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Octagon" Button
       octagonButton = new JButton("Octagon");
+
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
@@ -145,7 +144,7 @@ public class ShapeDrawGUI extends JFrame {
       
       
       //Create "Green" Button
-      greenButton = new JButton("Red");
+      greenButton = new JButton("Green");
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -168,16 +167,15 @@ public class ShapeDrawGUI extends JFrame {
       positionConst.gridy = 2;
       add(yellowButton, positionConst);
       
-      //Create "Purple" Button
-      purpleButton = new JButton("Purple");
+      //Create "Orange" Button
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
       positionConst.gridy = 2;
-      add(purpleButton, positionConst);
-      
+      add(orangeButton, positionConst);
       
    }
+      
 
    //this is what main will look like
    public static void main(String[] args) {
