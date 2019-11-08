@@ -37,15 +37,27 @@ import java.io.*;
 
 
 class ShapeHolder implements Iterable<GeometricAbstract> {   
-    GeometricAbstract[] shapes = new GeometricAbstract[50];
     private static ShapeHolder instance;
+    GeometricAbstract[] shapes = new GeometricAbstract[50];
+
 
     public static ShapeHolder getInstance() {
         if (instance == null) {
            instance = new ShapeHolder();
+           System.out.println("Created shapeholder");
+
+        }
+        else{
+            System.out.println("idk");
+
         }
         
         return instance;
+     }
+
+     private ShapeHolder() {
+        System.out.println("Created shapeholder");
+        //index = 0;
      }
 
     public GeometricIterator iterator() {
@@ -95,7 +107,7 @@ class GeometricIterator implements Iterator<GeometricAbstract> {
             ok = false;
         }
 
-        return ok;
+        return index < data.shapes.length;
       
 
     }
