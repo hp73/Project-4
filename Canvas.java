@@ -1,4 +1,3 @@
-package shapes;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -8,7 +7,6 @@ import java.awt.Rectangle;
 import javax.swing.JPanel;
 import java.awt.event.*;
 import shapes.*;
-
 
 //from the mouse stuff
 public class Canvas extends JPanel implements MouseListener, MouseMotionListener{
@@ -83,6 +81,36 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       
    }
    
+   @Override
+   public void actionPerformed(ActionEvent event){
+      
+      JButton sourceEvent = (JButton) event.getSource();
+      
+      if (sourceEvent == orangeButton){
+         this.setBackground(Color.ORANGE);
+      }
+      
+      else if (sourceEvent == yellowButton){
+         this.setBackground(Color.YELLOW);
+      }
+      
+      else if (sourceEvent == pinkButton){
+         this.setBackground(Color.PINK);
+      }
+      
+      else if (sourceEvent == redButton){
+         this.setBackground(Color.RED);
+      }
+      
+      else if (sourceEvent == blueButton){
+         this.setBackground(Color.BLUE);
+      }
+      
+      else if (sourceEvent == greenButton){
+         this.setBackground(Color.GREEN);
+      }
+      
+   }
 
    //make a draw method wheere you can just 
    //inherit everything and just put in which one you like

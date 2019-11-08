@@ -1,12 +1,15 @@
 
 //JFrame is in here
-package shapes;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+//import com.apple.eawt.ApplicationEvent;
+//import com.apple.eawt.ApplicationListener;
 
 
-public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
+public class ShapeDrawGUI extends JFrame{
     
    // Class Variables  
    private Canvas canvas;
@@ -69,7 +72,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Circle" Button
       circleButton = new JButton("Circle");
-      //circleButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 1;
@@ -80,7 +82,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       // Create "Square" Button
       squareButton = new JButton("Square");
-      //squareButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -91,8 +92,7 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       // Create "Rectangle" Button
       rectangleButton = new JButton("Rectangle");
-      //rectangleButton.addActionListener(this);
-      
+   
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 3;
       positionConst.gridy = 1;
@@ -102,7 +102,7 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Oval" Button
       ovalButton = new JButton("Oval");
-      //ovalButton.addActionListener(this);
+      ovalButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
@@ -111,9 +111,9 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       add(ovalButton, positionConst);
       
       
+      
       //Create "Octagon" Button
       octagonButton = new JButton("Octagon");
-      //octagonButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
@@ -123,7 +123,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "filled" check Box Button
       filledButton = new JCheckBox("filled");
-      //filledButton.addActionListener(this);
       
       positionConst.gridx = 6;
       positionConst.gridy = 1;
@@ -131,8 +130,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Red" Button
       redButton = new JButton("Red");
-      //redButton.addActionListener(this);
-      
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 0;
@@ -142,7 +139,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Blue" Button
       blueButton = new JButton("Blue");
-      //blueButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 1;
@@ -152,7 +148,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Green" Button
       greenButton = new JButton("Green");
-      //greenButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -161,7 +156,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Pink" Button
       pinkButton = new JButton("Pink");
-      //pinkButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 3;
@@ -170,7 +164,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Yellow" Button
       yellowButton = new JButton("Yellow");
-      //yellowButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
@@ -179,14 +172,14 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       //Create "Orange" Button
       orangeButton = new JButton("Orange");
-      //orangeButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
       positionConst.gridy = 2;
       add(orangeButton, positionConst);
+      
+      
    }
-    
    
    //this is what main will look like
    public static void main(String[] args) {
