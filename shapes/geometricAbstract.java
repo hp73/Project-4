@@ -81,7 +81,7 @@ public class GeometricAbstract {
 
         //returns the sharable things between 
         else {
-            geometricAbstract New = (geometricAbstract) other;
+            GeometricAbstract New = (GeometricAbstract) other;
             return (this.x  == New.x && 
                     this.y == New.y && 
                     this.filled == New.filled && 
