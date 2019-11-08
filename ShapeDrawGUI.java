@@ -2,14 +2,12 @@
 //JFrame is in here
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 //import com.apple.eawt.ApplicationEvent;
 //import com.apple.eawt.ApplicationListener;
 
 
-public class ShapeDrawGUI extends JFrame{
+public class ShapeDrawGUI extends JFrame {
     
    // Class Variables  
    private Canvas canvas;
@@ -25,7 +23,7 @@ public class ShapeDrawGUI extends JFrame{
    private JButton greenButton;
    private JButton pinkButton;
    private JButton yellowButton;
-   private JButton orangeButton;
+   private JButton purpleButton;
    
    
    public ShapeDrawGUI() {
@@ -102,14 +100,12 @@ public class ShapeDrawGUI extends JFrame{
       
       //Create "Oval" Button
       ovalButton = new JButton("Oval");
-      ovalButton.addActionListener(this);
-      
+   
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
       positionConst.gridy = 1;
       positionConst.insets = new Insets(5, 5, 5, 5);
       add(ovalButton, positionConst);
-      
       
       
       //Create "Octagon" Button
@@ -147,7 +143,7 @@ public class ShapeDrawGUI extends JFrame{
       
       
       //Create "Green" Button
-      greenButton = new JButton("Green");
+      greenButton = new JButton("Red");
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -170,17 +166,17 @@ public class ShapeDrawGUI extends JFrame{
       positionConst.gridy = 2;
       add(yellowButton, positionConst);
       
-      //Create "Orange" Button
-      orangeButton = new JButton("Orange");
+      //Create "Purple" Button
+      purpleButton = new JButton("Purple");
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
       positionConst.gridy = 2;
-      add(orangeButton, positionConst);
+      add(purpleButton, positionConst);
       
       
    }
-   
+      
    //this is what main will look like
    public static void main(String[] args) {
        
