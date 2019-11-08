@@ -36,72 +36,66 @@ import java.io.*;
 
 
 
-public class ShapeHolder implements Iterable<GeometricAbstract> {   
+class ShapeHolder implements Iterable<GeometricAbstract> {   
     GeometricAbstract[] shapes = new GeometricAbstract[50];
     private static ShapeHolder instance;
 
-    public GeometricIterator iterator() {
-        return new PointIterator(this);
+    public static ShapeHolder getInstance() {
+        if (instance == null) {
+           instance = new ShapeHolder();
+        }
+        
+        return instance;
      }
+
+    public GeometricIterator iterator() {
+        return new GeometricIterator(this);
+     }
+
     
-    /*public static ShapeHolder getInstance() {
-       if (instance == null) {
-          instance = new ShapeHolder();
-       }
-       
-       return instance;
-    }*/
+    
 }
  
 //the iterator
-class GeometricIterator implements Iterable<GeometricAbstract> {
-    private int index = 0;
+class GeometricIterator implements Iterator<GeometricAbstract> {
+    private int index;
     ShapeHolder data;
     
-    /*public ShapeContainer() {
-       shapes = new shapes[] {new GeometricShape(),
-                               new Square(1, "Blue", 3, 4),
-                               new Square()};
-    }*/
-    
-    public GeometricIterator iterator() {
-        index = 0;
-       return new GeometricIterator(this);
-    }
 
     public GeometricIterator(ShapeHolder data) {
         this.data = data;
-        current = 0;
+        index = 0;
      }
 
          /*public Square next() {
        return data.squares[current++];
        
     }*/
-    private void next(){
+    public GeometricAbstract next(){
         //this tells you  what is next in the Geometric shape array
         index ++; 
-        System.out.println(shapes[index]);
+        return data.shapes[index++];
+
 
     }
 
     /*public boolean hasNext() {
        return current < data.squares.length;
     }*/
-    private void hasNext(){
+    public boolean hasNext(){
         //checks where or not a there is room next in GeometricShapes has a next
         //returns string
-        String ok;
-        int length = shapes.length;
+        boolean ok;
+        int length = data.shapes.length;
 
         if(index +  1 <= length ){
-            ok = "the next value is: " + index + 1;
+            ok = true;
         }
         else{
-            ok = "there is no next value";
+            ok = false;
         }
 
-        System.out.println(ok);
+        return ok;
       
 
     }
