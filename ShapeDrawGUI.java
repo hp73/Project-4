@@ -1,12 +1,11 @@
 
 //JFrame is in here
 package shapes;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.*;
 
 
-public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
+public class ShapeDrawGUI extends JFrame {
     
    // Class Variables  
    private Canvas canvas;

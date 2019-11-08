@@ -1,4 +1,3 @@
-package shapes;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -7,11 +6,10 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import javax.swing.JPanel;
 import java.awt.event.*;
-import shapes.*;
 
 
 //from the mouse stuff
-public class Canvas extends JPanel implements MouseListener, MouseMotionListener{
+public class Canvas extends JPanel implements MouseListener, MouseMotionListener {
    
    //Variables
    //updates the mouse things and "what we want itto be"
@@ -217,8 +215,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    // Needed for mouse listeners
    @Override
    public void mouseClicked(MouseEvent e) {
-      
-      
+        
    }
    
    
