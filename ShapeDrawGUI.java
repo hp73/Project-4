@@ -2,12 +2,14 @@
 //JFrame is in here
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 //import com.apple.eawt.ApplicationEvent;
 //import com.apple.eawt.ApplicationListener;
 
 
-public class ShapeDrawGUI extends JFrame {
+public class ShapeDrawGUI extends JFrame implements ActionListener {
     
    // Class Variables  
    private Canvas canvas;
@@ -23,7 +25,7 @@ public class ShapeDrawGUI extends JFrame {
    private JButton greenButton;
    private JButton pinkButton;
    private JButton yellowButton;
-   private JButton purpleButton;
+   private JButton orangeButton;
    
    
    public ShapeDrawGUI() {
@@ -62,7 +64,7 @@ public class ShapeDrawGUI extends JFrame {
       
       // Create "Triangle" Button
       triangleButton = new JButton("Triangle");
-      //triangleButton.addActionListener(this);
+      triangleButton.addActionListener(this);
       
       positionConst.gridx = 0;
       positionConst.gridy = 1;
@@ -72,6 +74,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Circle" Button
       circleButton = new JButton("Circle");
+      circleButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 1;
@@ -82,6 +85,7 @@ public class ShapeDrawGUI extends JFrame {
       
       // Create "Square" Button
       squareButton = new JButton("Square");
+      squareButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -92,6 +96,7 @@ public class ShapeDrawGUI extends JFrame {
       
       // Create "Rectangle" Button
       rectangleButton = new JButton("Rectangle");
+      rectangleButton.addActionListener(this);
    
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 3;
@@ -102,6 +107,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Oval" Button
       ovalButton = new JButton("Oval");
+      ovalButton.addActionListener(this);
    
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
@@ -112,6 +118,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Octagon" Button
       octagonButton = new JButton("Octagon");
+      octagonButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
@@ -121,6 +128,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "filled" check Box Button
       filledButton = new JCheckBox("filled");
+      filledButton.addActionListener(this);
       
       positionConst.gridx = 6;
       positionConst.gridy = 1;
@@ -128,6 +136,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Red" Button
       redButton = new JButton("Red");
+      redButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 0;
@@ -137,6 +146,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Blue" Button
       blueButton = new JButton("Blue");
+      blueButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 1;
@@ -145,7 +155,8 @@ public class ShapeDrawGUI extends JFrame {
       
       
       //Create "Green" Button
-      greenButton = new JButton("Red");
+      greenButton = new JButton("Green");
+      greenButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 2;
@@ -154,6 +165,7 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Pink" Button
       pinkButton = new JButton("Pink");
+      pinkButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 3;
@@ -162,21 +174,75 @@ public class ShapeDrawGUI extends JFrame {
       
       //Create "Yellow" Button
       yellowButton = new JButton("Yellow");
+      yellowButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 4;
       positionConst.gridy = 2;
       add(yellowButton, positionConst);
       
-      //Create "Purple" Button
-      purpleButton = new JButton("Purple");
+      //Create "Orange" Button
+      orangeButton = new JButton("Orange");
+      orangeButton.addActionListener(this);
       
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
       positionConst.gridy = 2;
-      add(purpleButton, positionConst);
+      add(orangeButton, positionConst);   
+   }
+   
+   @Override
+   public void actionPerformed(ActionEvent event){
       
+      JButton sourceEvent = (JButton) event.getSource();
+      if (sourceEvent == triangleButton){
+         System.out.println("triangle");
+      }
       
+      if (sourceEvent == circleButton){
+         System.out.println("circle");
+      }
+      
+      if (sourceEvent == squareButton){
+         System.out.println("square");
+      }
+      
+      if (sourceEvent == rectangleButton){
+         System.out.println("rectangle");
+      }
+      
+      if (sourceEvent == ovalButton){
+         System.out.println("oval");
+      }
+      
+      if (sourceEvent == octagonButton){
+         System.out.println("octagon");
+      }
+      
+      if (sourceEvent == redButton){
+         System.out.println("red");
+      }
+      
+      if (sourceEvent == blueButton){
+         System.out.println("blue");
+      }
+      
+      if (sourceEvent == greenButton){
+         System.out.println("green");
+      }
+      
+      if (sourceEvent == pinkButton){
+         System.out.println("pink");
+      }
+      
+      if (sourceEvent == yellowButton){
+         System.out.println("yellow");
+      }
+      
+      if (sourceEvent == orangeButton){
+         System.out.println("orange");
+      }
+    
    }
       
    //this is what main will look like
