@@ -2,14 +2,13 @@
 //JFrame is in here
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 //import com.apple.eawt.ApplicationEvent;
 //import com.apple.eawt.ApplicationListener;
 
 
-public class ShapeDrawGUI extends JFrame implements ActionListener {
+public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener {
     
    // Class Variables  
    private Canvas canvas;
@@ -126,14 +125,6 @@ public class ShapeDrawGUI extends JFrame implements ActionListener {
       add(octagonButton, positionConst);
       
       
-      //Create "filled" check Box Button
-      filledButton = new JCheckBox("filled");
-      filledButton.addActionListener(this);
-      
-      positionConst.gridx = 6;
-      positionConst.gridy = 1;
-      add(filledButton, positionConst);
-      
       //Create "Red" Button
       redButton = new JButton("Red");
       redButton.addActionListener(this);
@@ -188,10 +179,32 @@ public class ShapeDrawGUI extends JFrame implements ActionListener {
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 5;
       positionConst.gridy = 2;
-      add(orangeButton, positionConst);   
+      add(orangeButton, positionConst);
+      
+      
+      //Create "filled" check Box Button
+      filledButton = new JCheckBox("filled");
+      filledButton.setMnemonic(KeyEvent.VK_C);
+      filledButton.setSelected(true);
+      filledButton.addItemListener(this);
+      
+      positionConst.gridx = 6;
+      positionConst.gridy = 1;
+      add(filledButton, positionConst);
    }
    
-   /*
+   public void itemStateChanged(ItemEvent event){
+      
+      JCheckBox sourceEvent = (JCheckBox) event.getItemSelectable();
+      
+      if (sourceEvent == filledButton){
+         System.out.println("Filled");
+      }
+      if (event.getStateChange() == ItemEvent.DESELECTED){
+         System.out.println("Not filled");
+      }
+   }
+   
    @Override
    public void actionPerformed(ActionEvent event){
       
@@ -245,7 +258,7 @@ public class ShapeDrawGUI extends JFrame implements ActionListener {
       }
     
    }
-   */
+   
    
       
    //this is what main will look like

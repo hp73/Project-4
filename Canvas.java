@@ -257,47 +257,4 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
 
    }*/
    
-   
-   public interface Command{
-      public void execute();
-   }
-   
-   public class Button{
-      public void activate(){
-         System.out.println("Button has been activated");
-      }
-      
-      public void deactivate(){
-         System.out.println("Button has been deactivated");
-      }
-   }
-   
-   public class makeRedCommand implements Command{
-      Button button;
-      
-      public makeRedCommand(Button button){
-         super();
-         this.button = button;
-      }
-      public void execute(){
-         System.out.println("Making shape red");
-         button.makeRed();
-      }
-   }
-   
-   public class GUIRemote {
-      
-      //Command Holder
-      Command command;
-      
-      public void setCommand(Command command){
-         this.command = command;
-      }
-      
-      public void buttonpressed(){
-         command.execute();
-      }
-   }
-   
-   
 }
