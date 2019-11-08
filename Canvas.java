@@ -26,6 +26,8 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    private String shape;
    //private Octagon drawPoly;
    //private Circle drawRound;
+   //private Graphics g;
+   //private ShapeHolder sh;
 
 
    
@@ -65,14 +67,19 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
          g.setColor(colorSelect);
 
       //a method and instance varible called drawRect, watch out!!!
-      //if method is there you ae clicked
+      //if method is there you are clicked
       // the method draws the rectangle
          g.drawRect((int)drawRect.getX(), (int)drawRect.getY(), 
          (int)drawRect.getWidth(), (int)drawRect.getHeight());
          
          // Draw the current shape here
 
-         //g.drawPoly((int)drawPoly.getX(), (int)drawPoly.getY(), (int)drawPoly.getWidth(), (int)drawPoly.getHeight());
+        // g.drawPoly((int)drawPoly.getX(), (int)drawPoly.getY(),
+        //(int)drawPoly.getWidth(), (int)drawPoly.getHeight());
+         
+        //g.drawRound((int)drawRound.getX(), (int)drawRound.getY(),
+        //(int)drawRound.getWidth(), (int)drawRound.getHeight());
+         
          
       }
       
