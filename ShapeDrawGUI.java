@@ -58,7 +58,6 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       
       // Adding buttons and checkboxes 
 
-      
       // Create "Triangle" Button
       triangleButton = new JButton("Triangle");
       //triangleButton.addActionListener(this);
@@ -66,8 +65,7 @@ public class ShapeDrawGUI extends JFrame /* implements ActionListener */ {
       positionConst.gridx = 0;
       positionConst.gridy = 1;
       positionConst.insets = new Insets(5, 5, 5, 5);
-      add(triangleButton, positionConst);
-      
+      add(triangleButton, positionConst); 
       
       //Create "Circle" Button
       circleButton = new JButton("Circle");

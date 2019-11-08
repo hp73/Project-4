@@ -14,7 +14,7 @@ import shapes.*;
 public class Canvas extends JPanel implements MouseListener, MouseMotionListener{
    
    //Variables
-   //updates the mouse things and "what we want itto be"
+   //updates the mouse things and "what we want it to be"
    private Point posStart;
    private Point posEnd;   
    private Rectangle drawRect;
@@ -27,7 +27,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    
    // Final variables
    //the outline of the rectangle
-   //abstract draw metjod
+   //abstract draw method
    final private Color colorSelect = new Color(0, 200, 200);
    
    // Constructors and setup methods
@@ -70,7 +70,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
          g.setColor(colorSelect);
 
       //a method and instance varible called drawRect, watch out!!!
-      //if method is there you ahve clicked
+      //if method is there you have clicked
       // the method draws the rectangle
          g.drawRect((int)drawRect.getX(), (int)drawRect.getY(), 
          (int)drawRect.getWidth(), (int)drawRect.getHeight());
@@ -84,9 +84,10 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    }
    
 
-      //make a draw method wehere you can just 
-   //inherit everything and jut put in which oen you like
-   /*public void draw(Class shape){
+   //make a draw method wheere you can just 
+   //inherit everything and just put in which one you like
+   /*
+   public void draw(Class shape){
 
       if (shape == Circle ){
          int x = posEnd.getX();
@@ -104,7 +105,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       }
       
 
-   }*/
+   } */
    
    // Highly recommended to create this method for assisting in the paintComponent method
    /*private void drawGenericShape(Graphics g, GeometricAbstract s) {
