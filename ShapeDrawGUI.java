@@ -191,6 +191,7 @@ public class ShapeDrawGUI extends JFrame implements ActionListener {
       add(orangeButton, positionConst);   
    }
    
+   /*
    @Override
    public void actionPerformed(ActionEvent event){
       
@@ -244,6 +245,8 @@ public class ShapeDrawGUI extends JFrame implements ActionListener {
       }
     
    }
+   */
+   
       
    //this is what main will look like
    public static void main(String[] args) {
@@ -253,7 +256,6 @@ public class ShapeDrawGUI extends JFrame implements ActionListener {
       
       // Show window
       appFrame.setVisible(true);
-       
        
    }
 }
