@@ -26,12 +26,14 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    private Point posEnd;   
    private Rectangle drawRect;
    private String shape;
+   private ShapeHolder shapes;
+   private GeometricAbstract temp;
 
 
    // Final variables
    //the outline of the rectangle
    //abstract draw method
-   final private Color colorSelect = new Color(0, 200, 200);
+   private Color colorSelect = new Color(0, 200, 200);
    
    // Constructors and setup methods
    public Canvas(ShapeHolder bucket) {
@@ -59,47 +61,52 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
       // Draw any shapes in the shape holder here
       // Draw drag rectangle if it is there
 
-/*
-      for (GeometricAbstract k : ShapeHolder){
-         shapes.addShape(shape);
+
+      for (GeometricAbstract k : this.shapes){
+         draw(g, k);
 
       }
-*/
+
 
 
       
    }
 
-   public static void draw(Graphics g, GeometricAbstract s){
-      g.drawOval(100,100,100,100);
+   private void draw(Graphics g, GeometricAbstract s){
+      //g.drawOval(100,100,100,100);
 
-         if (s instanceof Circle){
-            g.setColor(colorSelect);
 
-            g.drawOval((int)drawOval.getX(), (int)drawOval.getX(), 
-            (int)drawOval.getWidth(), (int)drawOval.getHeight());
-         }
-         else if (s instanceof Oval){
-            g.setColor(colorSelect);
-
-            g.drawOval((int)drawOval.getX(), (int)drawOval.getY(), 
-            (int)drawOval.getWidth(), (int)drawOval.getHeight());
-         }
-         else if(shape == "Octagon"){
-            g.setColor(colorSelect);
-            g.drawRect(100,200,400,500);
-      
-      
-            g.drawOval((int)drawRect.getX(), (int)drawRect.getX(), 
-            (int)drawRect.getWidth(), (int)drawRect.getHeight());
-         }
-         else if (drawRect != null) {
-            g.setColor(colorSelect);
+         if (drawRect != null) {
+            g.setColor(this.colorSelect);
       
             g.drawRect((int)drawRect.getX(), (int)drawRect.getY(), 
             (int)drawRect.getWidth(), (int)drawRect.getHeight());
             
          }
+
+         if (this.shape.equals("Circle")){
+            double radius = this.posStart.getX() + this.posEnd.getX()/2;
+            s = new Circle((int)radius,(int)this.posStart.getX(),(int)this.posStart.getY());
+            g.setColor(this.colorSelect);
+
+            g.drawOval((int)s.getX(), (int)s.getX(), 
+            (int)s.getX(), (int)s.getX());
+         }
+         else if (s instanceof Oval){
+            g.setColor(this.colorSelect);
+
+            g.drawOval((int)s.getX(), (int)s.getY(), 
+            (int)drawRect.getWidth(), (int)drawRect.getHeight());
+         }
+         else if(s instanceof Octagon){
+            g.setColor(this.colorSelect);
+            g.drawRect(100,200,400,500);
+      
+      
+            g.drawRect((int)drawRect.getX(), (int)drawRect.getX(), 
+            (int)drawRect.getWidth(), (int)drawRect.getHeight());
+         }
+         
 
       
 
@@ -132,8 +139,8 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    @Override
    public void mousePressed(MouseEvent e) {
       if (e.getButton() == MouseEvent.BUTTON1) {
-         posStart = new Point(e.getX(), e.getY());
-         posEnd = new Point(e.getX(), e.getY());
+         this.posStart = new Point(e.getX(), e.getY());
+         this.posEnd = new Point(e.getX(), e.getY());
       }
       
          updateRectangle(); 
@@ -143,10 +150,10 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    @Override
    public void mouseReleased(MouseEvent e) {
       if (e.getButton() == MouseEvent.BUTTON1) {
-         posEnd.setLocation(e.getX(), e.getY());
+         this.posEnd.setLocation(e.getX(), e.getY());
          updateRectangle();
          
-         
+         this.shapes.add(this.temp);
 
          drawRect = null;
          posStart = null;
@@ -159,7 +166,7 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    @Override
    public void mouseDragged(MouseEvent e) {
       if (drawRect != null) {
-         posEnd.setLocation(e.getX(), e.getY());
+         this.posEnd.setLocation(e.getX(), e.getY());
          updateRectangle();
       }
 
@@ -177,6 +184,8 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
    public void setShape(String shape){
       this.shape = shape;
    }
+
+
 
 
    //Changing Rectangle
