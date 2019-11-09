@@ -35,7 +35,9 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
    private JButton yellowButton;
    private JButton orangeButton;
 
-   ShapeHolder container = new ShapeHolder();
+   private String shapePicker;
+
+   private ShapeHolder container = ShapeHolder.getInstance();
    
    
    public ShapeDrawGUI() {
@@ -60,7 +62,7 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
 
 
       //the canvas is doing anything that is drawn
-      canvas = new Canvas(container);        
+      canvas = new Canvas(this.container);        
       add(canvas, positionConst);
       
       positionConst.fill = GridBagConstraints.HORIZONTAL;
@@ -68,7 +70,6 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
       positionConst.gridy = 1;
       positionConst.weighty = 0;
 
-      GeometricAbstract shapePicker;
       
       
       // Adding buttons and checkboxes 
@@ -206,7 +207,8 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
       positionConst.gridy = 1;
       add(filledButton, positionConst);
    }
-   
+
+
    @Override
    public void itemStateChanged(ItemEvent event){
       
@@ -229,44 +231,50 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
       if (sourceEvent == triangleButton){
          System.out.println("triangle");
 
-         shapePicker = new Triangle();
+         canvas.setShape("Triangle");
+         //this. shapePicker = "Triangle";
+
+         //this.shapePicker = new Triangle();
          //Canvas.draw(Triangle);
       }
       
       if (sourceEvent == circleButton){
          System.out.println("circle");
-         //Circle cool = new Circle();
+         canvas.setShape("Circle");
 
-         shapePicker = new Circle();
+
+         //this.shapePicker = new Circle();
 
          //canvas.draw(Circle);
       }
       
       if (sourceEvent == squareButton){
          System.out.println("square");
+         canvas.setShape("Square");
 
-         shapePicker = new Square();
+         //shapePicker = new Square();
 
       }
       
       if (sourceEvent == rectangleButton){
          System.out.println("rectangle");
+         canvas.setShape("Rectangle");
 
-         shapePicker = new Rectangle();
+         //shapePicker = new shapes.Rectangle();
 
       }
       
       if (sourceEvent == ovalButton){
          System.out.println("oval");
-
-         shapePicker = new Oval();
+         canvas.setShape("Oval");
+         //shapePicker = new Oval();
 
       }
       
       if (sourceEvent == octagonButton){
          System.out.println("octagon");
-
-         shapePicker = new Octagon();
+         canvas.setShape("Octagon");
+         //shapePicker = new Octagon();
 
       }
       
