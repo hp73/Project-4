@@ -1,8 +1,6 @@
-import shapes.*;
+/*import shapes.*;
 
 public class ShapeHolderTester {
-   
-   
    public static void main(String[] args) {
       ShapeHolder sh = ShapeHolder.getInstance();
       
@@ -14,4 +12,4 @@ public class ShapeHolderTester {
          System.out.println(shp);
       }
    }
-}
+}*/

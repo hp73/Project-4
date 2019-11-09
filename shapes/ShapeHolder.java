@@ -14,7 +14,7 @@
  * @author Laurie Jones
  * 
  */
-
+package shapes;
 import java.util.Arrays; 
 import java.util.*;
 import java.io.*; 
@@ -113,7 +113,3 @@ class GeometricIterator implements Iterator<GeometricAbstract> {
     }
     
  }
- 
-
- 
- 

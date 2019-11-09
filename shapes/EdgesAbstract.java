@@ -3,6 +3,7 @@
  * @author Harry Pinkerton
  * @version 1.0 Project 3
 */
+package shapes;
 
 public class EdgesAbstract extends GeometricAbstract {
     
