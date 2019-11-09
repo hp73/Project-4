@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.*;
 import shapes.*;
 
+
 //import com.apple.eawt.ApplicationEvent;
 //import com.apple.eawt.ApplicationListener;
 
@@ -33,6 +34,8 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
    private JButton pinkButton;
    private JButton yellowButton;
    private JButton orangeButton;
+
+   ShapeHolder container = new ShapeHolder();
    
    
    public ShapeDrawGUI() {
@@ -57,13 +60,15 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
 
 
       //the canvas is doing anything that is drawn
-      canvas = new Canvas();        
+      canvas = new Canvas(container);        
       add(canvas, positionConst);
       
       positionConst.fill = GridBagConstraints.HORIZONTAL;
       positionConst.gridwidth = 1;
       positionConst.gridy = 1;
       positionConst.weighty = 0;
+
+      GeometricAbstract shapePicker;
       
       
       // Adding buttons and checkboxes 
@@ -71,7 +76,6 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
       
       // Create "Triangle" Button
       triangleButton = new JButton("Triangle");
-      triangleButton.addActionListener(this);
       
       positionConst.gridx = 0;
       positionConst.gridy = 1;
@@ -82,7 +86,9 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
       //Create "Circle" Button
       circleButton = new JButton("Circle");
       circleButton.addActionListener(this);
-      
+      circleButton.getText();
+      //Canvas.shape = "Circle";
+
       positionConst.insets = new Insets(10, 10, 10, 10);
       positionConst.gridx = 1;
       positionConst.gridy = 1;
@@ -216,34 +222,58 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
    
    @Override
    public void actionPerformed(ActionEvent event){
+      Class thing;
+      String newShape;
       
       JButton sourceEvent = (JButton) event.getSource();
       if (sourceEvent == triangleButton){
          System.out.println("triangle");
+
+         shapePicker = new Triangle();
+         //Canvas.draw(Triangle);
       }
       
       if (sourceEvent == circleButton){
          System.out.println("circle");
+         //Circle cool = new Circle();
+
+         shapePicker = new Circle();
+
+         //canvas.draw(Circle);
       }
       
       if (sourceEvent == squareButton){
          System.out.println("square");
+
+         shapePicker = new Square();
+
       }
       
       if (sourceEvent == rectangleButton){
          System.out.println("rectangle");
+
+         shapePicker = new Rectangle();
+
       }
       
       if (sourceEvent == ovalButton){
          System.out.println("oval");
+
+         shapePicker = new Oval();
+
       }
       
       if (sourceEvent == octagonButton){
          System.out.println("octagon");
+
+         shapePicker = new Octagon();
+
       }
       
       if (sourceEvent == redButton){
          System.out.println("red");
+
+         
       }
       
       if (sourceEvent == blueButton){
@@ -267,7 +297,9 @@ public class ShapeDrawGUI extends JFrame implements ActionListener, ItemListener
       }
     
    }
-   
+
+
+ 
    
    //this is what main will look like
    public static void main(String[] args) {
