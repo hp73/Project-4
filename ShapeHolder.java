@@ -14,11 +14,11 @@
  * @author Laurie Jones
  * 
  */
-package shapes;
+//package shapes;
 import java.util.Arrays; 
 import java.util.*;
 import java.io.*; 
-//import shapes.*;
+import shapes.*;
 
 //the iterable
 //integer is whatever you want to go over
@@ -38,7 +38,8 @@ import java.io.*;
 
 class ShapeHolder implements Iterable<GeometricAbstract> {   
     private static ShapeHolder instance;
-    GeometricAbstract[] shapes = new GeometricAbstract[50];
+    private GeometricAbstract[] shapes;
+    private Iterator pointer;
 
 
     public static ShapeHolder getInstance() {
@@ -57,12 +58,23 @@ class ShapeHolder implements Iterable<GeometricAbstract> {
 
      private ShapeHolder() {
         System.out.println("Created shapeholder");
+        this.shapes = new GeometricAbstract[50];
+        this.pointer = new GeometricIterator(this);
+
+        
         //index = 0;
      }
+
 
     public GeometricIterator iterator() {
         return new GeometricIterator(this);
      }
+
+     public void add(GeometricAbstract thing){
+        this.pointer.addShape(thing);
+     }
+
+
 
     
     
@@ -110,6 +122,11 @@ class GeometricIterator implements Iterator<GeometricAbstract> {
         return index < data.shapes.length;
       
 
+    }
+
+    public void addShape(GeometricAbstract coolThing){
+        this.shapes[index] = coolThing;
+        index ++;
     }
     
  }
