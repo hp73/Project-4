@@ -92,15 +92,39 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
             g.drawOval((int)s.getX(), (int)s.getX(), 
             (int)s.getX(), (int)s.getX());
          }
-         else if (s instanceof Oval){
+         else if (this.shape.equals("Oval")){
             g.setColor(this.colorSelect);
 
             g.drawOval((int)s.getX(), (int)s.getY(), 
             (int)drawRect.getWidth(), (int)drawRect.getHeight());
          }
-         else if(s instanceof Octagon){
+         else if(this.shape.equals("Square")){
+            g.setColor(this.colorSelect);
+            g.drawRect(100,100,400,400);
+      
+      
+            g.drawRect((int)drawRect.getX(), (int)drawRect.getX(), 
+            (int)drawRect.getWidth(), (int)drawRect.getHeight());
+         }
+         else if(this.shape.equals("Triangle")){
+            g.setColor(this.colorSelect);
+            g.drawRect(100,100,400,500);
+      
+      
+            g.drawRect((int)drawRect.getX(), (int)drawRect.getX(), 
+            (int)drawRect.getWidth(), (int)drawRect.getHeight());
+         }
+         else if(this.shape.equals("Octagon")){
             g.setColor(this.colorSelect);
             g.drawRect(100,200,400,500);
+      
+      
+            g.drawRect((int)drawRect.getX(), (int)drawRect.getX(), 
+            (int)drawRect.getWidth(), (int)drawRect.getHeight());
+         }
+         else{
+            g.setColor(this.colorSelect);
+            g.drawRect(100,200,200,200);
       
       
             g.drawRect((int)drawRect.getX(), (int)drawRect.getX(), 
