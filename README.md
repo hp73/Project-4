@@ -3,14 +3,27 @@ CS 209 Fall 2019
 By Harry Pinkerton and Laurie Jones
 
 ===Features===
---Selection of shapes--
-Describe how you programmed the selection of shapes in a general sense, include descriptions of any patterns you used.
---Dragged shape preview--
-etc
---Other features--
-etc etc
+--Save Image W/ A File Chooser--
+- Implements JFileChooser to save a Screenshot of the image displayed on Canvas
+- Default path is current Directory for Saving
+- Image set as a png
 
-===ShapeHolder===
+--Change Colors with PreSets--
+- Dropdown JComboBox to choose between different Gradients
+- Options Include: BlueScale, GreyScale, and Rainbow
+- No Popup/ Display of Gradient
+
+--Save/Load Position--
+
+
+
+--Julia Set--
+- Dropdown JComboBox to choose between Julia and Mandelbrot Sets
+- Displays image on the Canvas
+- implements all other features.
+
+
+===MandelBrot===
 General description of the class and how it works
 --Variables--
 instanceVariable1: For doing something important
@@ -19,13 +32,20 @@ StaticVariable: Something static, describe its purpose
 --Methods--
 Methods list and their purpose, any errors thrown
 
-===ShapeDrawGUI===
+===Canvas===
 General description of the class and how it works
 --Variables--
 
 --Methods--
 
-===Canvas===
+===Rainbow===
+General description of the class and how it works
+--Variables--
+
+--Methods--
+
+
+===setCalculator===
 General description of the class and how it works
 --Variables--
 
