@@ -5,7 +5,6 @@
 */
 package shapes;
 
-
 public class GeometricAbstract {
  // Default variables
     public static final String DEFAULT_COLOR = "Black";
