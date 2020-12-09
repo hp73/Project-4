@@ -3,7 +3,7 @@
  * @author Laurie Jones
  * @version 1.0 
 */
-package shapes;
+
 
 public class GeometricAbstract {
  // Default variables
