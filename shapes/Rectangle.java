@@ -3,6 +3,7 @@
  * @author Harry Pinkerton
  * @version 1.0
 */
+package shapes;
 
 public class Rectangle extends EdgesAbstract{
    

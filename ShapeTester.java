@@ -13,6 +13,8 @@
 
 import java.util.Arrays;
 import java.util.Random;
+//package shapes;
+import shapes.*;
 
 public class ShapeTester {
 
@@ -42,7 +44,7 @@ public class ShapeTester {
    public static void main (String [] args){
       
 //Tests out OVAL
-Oval oval1 = new Oval(3, 6, 4,5, true, "PURPLE");
+      Oval oval1 = new Oval(3, 6, 4,5, true, "PURPLE");
 
 //tests out OVAL toString        
         System.out.println(oval1.toString());
@@ -91,7 +93,7 @@ Oval oval1 = new Oval(3, 6, 4,5, true, "PURPLE");
 
 
 //Tests out Circle
-Circle circle2 = new Circle(3,4,5, true, "WHITE");
+      Circle circle2 = new Circle(3,4,5, true, "WHITE");
 
 //tests out toString        
         System.out.println(circle2.toString());
@@ -354,11 +356,5 @@ Circle circle2 = new Circle(3,4,5, true, "WHITE");
       System.out.println("expect false:");
       System.out.println(octagonA.equals(triangleA));
       
-
-
-
-
-
-   }
-  
+      }
 }
